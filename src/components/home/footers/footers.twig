@@ -1,0 +1,60 @@
+
+{% set uniqueId = "id_16ef2b95-c69e-4ff9-87f6-68b02b58e980" %}
+{% set backgroundFixed = general_settings.fixed ? 'fixed' : 'scroll' %}
+{% set backgroundColor = general_settings.background_color_enable ? 'background-color:' ~  general_settings.color ~  ';' : '' %}
+{% set backgroundImage = general_settings.background_image_enable ? 'background-image: url(' ~  general_settings.image ~ 
+');background-attachment:' ~  backgroundFixed ~  ';background-size:' ~  general_settings.size ~  ';' : '' %}
+{% set builderMode = true %}
+
+<footer data-id="footers" class="veda-section" css="{{ backgroundColor }}{{ backgroundImage }}">
+  <div class="core-overlay" css="background-color: {{ general_settings.overlay }}"></div>
+  {% set collection = collections["402146787549"] %}
+  <div class="container">
+    <div class="row jc:center">
+      <div class="col-xs-9 col-sm-6 col-md-5 col-lg-3">
+        <ul class="nvd-footer-list">
+          <div class="nvd-footer__logo">{{heading.title}}</div>
+          <li class="nvd-footer-list__list"><a href="tel:+1234567890" class="nvd-footer-list__link">Call Us: +123-456-7890</a></li>
+          <li class="nvd-footer-list__list"><a href="mailto:Info@example.com" class="nvd-footer-list__link">Info@example.com</a></a></li>
+          <li class="nvd-footer-list__list"> <a class="nvd-footer-list__link">Monday till Friday 10 to 6 EST</a></li>
+        </ul>
+      </div>
+      <div  class="col-xs-9 col-sm-6 col-md-5 col-lg-3">
+        <ul class="nvd-footer-list">
+          <h3 class="nvd-footer-list__heading">{{customers.title}}</h3>
+          {% for item in customers.items %}
+            <li class="nvd-footer-list__list"><a class="nvd-footer-list__link" href="#">{{item.name}}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div  class="col-xs-9 col-sm-6 col-md-5 col-lg-3">
+        <ul class="nvd-footer-list">
+          <h3 class="nvd-footer-list__heading">{{our_shop.title}}</h3>
+          {% for item in our_shop.items %}
+            <li class="nvd-footer-list__list"><a class="nvd-footer-list__link" href="#">{{item.name}}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div  class="col-xs-9 col-sm-6 col-md-5 col-lg-3">
+        <ul class="nvd-footer-list">
+          <h3 class="nvd-footer-list__heading">{{new_letter.title}}</h3>
+          <li class="nvd-footer-list__list"><a class="nvd-footer-list__link" href="#">{{new_letter.name}}</a></li>
+        </ul>
+        <div class="nvd-footer__input">
+          <input placeholder="Email address" type="text">
+          <div class="btn-join">
+            <div>Join</div>
+          </div>
+        </div>
+        <div class="nvd-footer__about">
+          {% for item in new_letter.icons %}
+            {{item.icon}}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <p class="nvd-footer__copy-right">© 2021 BuildApp | All Rights Reserved</p>
+      </div>
+    </div>
+  </div>
+</footer>

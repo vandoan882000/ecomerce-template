@@ -1,0 +1,26 @@
+
+{% set uniqueId = "id_0a783fba-2896-4976-b707-ac04c48dcfab" %}
+{% set backgroundFixed = general_settings.fixed ? 'fixed' : 'scroll' %}
+{% set backgroundColor = general_settings.background_color_enable ? 'background-color:' ~  general_settings.color ~  ';' : '' %}
+{% set backgroundImage = general_settings.background_image_enable ? 'background-image: url(' ~  general_settings.image ~ 
+');background-attachment:' ~  backgroundFixed ~  ';background-size:' ~  general_settings.size ~  ';' : '' %}
+
+<section data-id="features" class="veda-section" css="{{ backgroundColor }}{{ backgroundImage }}">
+  <div class="core-overlay" css="background-color: {{ general_settings.overlay }}"></div>
+  <div class="container">
+    <h3 class="page-section__header" css="{{ heading.design }}">{{ heading.text }}</h3>
+    <div class="row jc:center">
+      {% for item in content %}
+      <div class="col-xs-12 col-sm-7 col-md-6 col-lg-4">
+        <div class="vdoan-trend">
+          <a href="#" style="display: block;"><img class="vdoan-trend__img" src={{item.srcImg | img_url('')}} alt="trend"></a>
+          <div class="vdoan-trend__content--{{item.type}}">
+            <div>{{item.name}}</div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
