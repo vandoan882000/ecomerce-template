@@ -1,5 +1,5 @@
 
-{% set uniqueId = "id_b988b0fa-1a69-421e-a2f5-7ed8b773f978" %}
+{% set uniqueId = "id_5373b778-e8cf-4847-ba27-b2a2824b418b" %}
 {% set backgroundFixed = general_settings.fixed ? 'fixed' : 'scroll' %}
 {% set backgroundColor = general_settings.background_color_enable ? 'background-color:' ~  general_settings.color ~  ';' : '' %}
 {% set backgroundImage = general_settings.background_image_enable ? 'background-image: url(' ~  general_settings.image ~ 
@@ -56,20 +56,12 @@
                     <del class="product-card__cost--before">${{ product.compare_at_price }}</del>
                   {% endif %}
                 </a>
-                {% for option in product.options_with_values %}
-                    {% if option.name == 'Color' or option.name == 'Colour' %}
-                      <script class="product-card__colors" type="application/json">{{ option.values | json_encode()}}</script>
-                      <script type="application/json">{{ product.variants | json_encode()}}</script>
-                    {% endif %}
-                {% endfor %}
-                {#
                 <div class="product-card__color">
                   <div class="circle__active--yellow"></div>
                   <div class="circle--blue"></div>
                   <div class="circle--violet"></div>
                   <div class="circle--plus">+1</div>
                   </div>
-                #}
 
               </div>
             </div>
@@ -77,6 +69,6 @@
         </div>
       </div>
     </div>
-    <!-- <button class="vdoan-btn__primary" style="margin-top: 30px;margin-bottom: 70px;">LOAD MORE</button> -->
+
   </div>
 </section>

@@ -54,20 +54,12 @@
                     <del class="product-card__cost--before">${{ product.compare_at_price }}</del>
                   {% endif %}
                 </a>
-                {% for option in product.options_with_values %}
-                    {% if option.name == 'Color' or option.name == 'Colour' %}
-                      <script class="product-card__colors" type="application/json">{{ option.values | json }}</script>
-                      <script type="application/json">{{ product.variants | json }}</script>
-                    {% endif %}
-                {% endfor %}
-                {%- comment -%}
                 <div class="product-card__color">
                   <div class="circle__active--yellow"></div>
                   <div class="circle--blue"></div>
                   <div class="circle--violet"></div>
                   <div class="circle--plus">+1</div>
                   </div>
-                {%- endcomment -%}
 
               </div>
             </div>
@@ -75,6 +67,6 @@
         </div>
       </div>
     </div>
-    <!-- <button class="vdoan-btn__primary" style="margin-top: 30px;margin-bottom: 70px;">LOAD MORE</button> -->
+
   </div>
 </section>
