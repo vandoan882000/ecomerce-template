@@ -89,69 +89,6 @@
         </div>
 
       </div>
-      <div class="col-lg-8 pl:40px shop-page2">
-        <div class="row row-cols-lg-12 row-cols-md-12 row-cols-sm-12 row-cols-12 pr:90px" component="content">
-          {% assign collection = collections[content.collection] %}
-
-          {% for product in collection.products limit: 4 %}
-            <div class="product-card fld:row ">
-              <div class="product-card__img w:30%">
-                <div class="pet-product-card__image">
-                  <a href="#" class="core-image-cover d:block" css="--aspect-ratio: 3/4">
-                    <img src="{{ product.featured_image.src | img_url: '250x' }}" alt="{{ product.title }}">
-                  </a>
-                </div>
-
-                <div class="product-card__state">
-                  {% if product.compare_at_price > product.price and content.sale.enable %}
-                    <div class="product-card__sale">
-                      <p>{{ content.sale.text }}</p>
-                    </div>
-                  {% endif %}
-                </div>
-                <div class="product-card__status">
-                  <div class="product-card__icon-bg" data-tooltip="Add to wishlist" data-tooltip-position="left">
-                    <i class="far fa-heart"></i>
-                  </div>
-                  <div class="product-card__icon-bg--hidden" data-tooltip="Quick view" data-tooltip-position="left">
-                    <i class="far fa-eye"></i>
-                  </div>
-                  <div class="product-card__icon-bg--hidden" data-tooltip="Compare to other products" data-tooltip-position="left">
-                    <i class="fas fa-compress"></i>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="product-card__content w:70% ai:flex-start h:100% jc:flex-start pl:30px">
-                <div class="product-card__brand">{{product.vendor}}</div>
-                <a class="product-card__name" href="#">{{product.title}}</a>
-                <a class="product-card__price" href="#">
-                  <ins class="product-card__cost">${{ product.price }}</ins>
-                  {% if product.compare_at_price > product.price %}
-                    <del class="product-card__cost--before">${{ product.compare_at_price }}</del>
-                  {% endif %}
-                </a>
-                <div class="product-card__color">
-                  <div class="circle__active--yellow"></div>
-                  <div class="circle--blue"></div>
-                  <div class="circle--violet"></div>
-                  <div class="circle--plus">+1</div>
-                  </div>
-                <div class="ta:left mt:30px">
-                  {{collection.description}}
-                </div>
-                <div class="product-card__add pos:static trf:translateY(0) mt:25px w:250px">
-                  <a href="#">{{content.add_to_cart_text}}</a>
-                </div>
-
-
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-
-      </div>
       <div class="col-lg-4">
         <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
           <div class="product-box">
@@ -258,6 +195,70 @@
 
         </div>
       </div>
+      <div class="col-lg-8 pl:40px shop-page2">
+        <div class="row row-cols-lg-12 row-cols-md-12 row-cols-sm-12 row-cols-12 pr:90px" component="content">
+          {% assign collection = collections[content.collection] %}
+
+          {% for product in collection.products limit: 4 %}
+            <div class="product-card fld:row ">
+              <div class="product-card__img w:30%">
+                <div class="pet-product-card__image">
+                  <a href="#" class="core-image-cover d:block" css="--aspect-ratio: 3/4">
+                    <img src="{{ product.featured_image.src | img_url: '250x' }}" alt="{{ product.title }}">
+                  </a>
+                </div>
+
+                <div class="product-card__state">
+                  {% if product.compare_at_price > product.price and content.sale.enable %}
+                    <div class="product-card__sale">
+                      <p>{{ content.sale.text }}</p>
+                    </div>
+                  {% endif %}
+                </div>
+                <div class="product-card__status">
+                  <div class="product-card__icon-bg" data-tooltip="Add to wishlist" data-tooltip-position="left">
+                    <i class="far fa-heart"></i>
+                  </div>
+                  <div class="product-card__icon-bg--hidden" data-tooltip="Quick view" data-tooltip-position="left">
+                    <i class="far fa-eye"></i>
+                  </div>
+                  <div class="product-card__icon-bg--hidden" data-tooltip="Compare to other products" data-tooltip-position="left">
+                    <i class="fas fa-compress"></i>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="product-card__content w:70% ai:flex-start h:100% jc:flex-start pl:30px">
+                <div class="product-card__brand">{{product.vendor}}</div>
+                <a class="product-card__name" href="#">{{product.title}}</a>
+                <a class="product-card__price" href="#">
+                  <ins class="product-card__cost">${{ product.price }}</ins>
+                  {% if product.compare_at_price > product.price %}
+                    <del class="product-card__cost--before">${{ product.compare_at_price }}</del>
+                  {% endif %}
+                </a>
+                <div class="product-card__color">
+                  <div class="circle__active--yellow"></div>
+                  <div class="circle--blue"></div>
+                  <div class="circle--violet"></div>
+                  <div class="circle--plus">+1</div>
+                  </div>
+                <div class="ta:left mt:30px">
+                  {{collection.description}}
+                </div>
+                <div class="product-card__add pos:static trf:translateY(0) mt:25px w:250px">
+                  <a href="#">{{content.add_to_cart_text}}</a>
+                </div>
+
+
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+      </div>
+
 
     </div>
 

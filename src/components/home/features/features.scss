@@ -1,22 +1,17 @@
 $uniqueId: "features";
 $container: "[data-id='#{$uniqueId}']";
 
-.text-box {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 20px;
-}
-.vdoan-trend {
-  min-height: 295px;
-  position: relative;
-  overflow: hidden;
-}
-.vdoan-trend__img {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
+// .vdoan-trend {
+//   min-height: 295px;
+//   position: relative;
+//   overflow: hidden;
+// }
+// .vdoan-trend__img {
+//   width: 100%;
+//   height: 100%;
+//   top: 0;
+//   left: 0;
+// }
 [class^="vdoan-trend__content"] {
   position: absolute;
   background-color: black;

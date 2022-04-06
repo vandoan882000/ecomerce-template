@@ -1,6 +1,6 @@
 // import "./home/products/products.js";
 // import "./cart/cartContainer/cartContainer.js";
-import "./product/shopPage/shopPage.js";
+// import "./product/shopPage/shopPage.js";
 function createMenu({
   createMenuButton
 }) {
@@ -118,3 +118,4 @@ function sizeScreen() {
 }
 
 sizeScreen();
+console.log("123");

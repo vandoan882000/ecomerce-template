@@ -10,7 +10,6 @@
     "twig-clean": "node ./gulp/twigClean.js"
   },
   "devDependencies": {
-    "atomizer": "^3.13.0",
     "browser-sync": "^2.27.7",
     "color-string": "^1.9.0",
     "cross-env": "^7.0.3",
@@ -23,7 +22,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-twig": "^1.2.0",
     "lodash": "^4.17.21",
-    "mota-css": "0.0.6",
+    "mota-css": "0.1.9",
     "node-watch": "^0.7.3",
     "polished": "^4.1.4",
     "ramda": "^0.28.0",

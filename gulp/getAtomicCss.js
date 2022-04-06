@@ -1,11 +1,12 @@
-const motaCss = require("mota-css").default;
+const { atomic } = require("mota-css");
 
-motaCss.setConfig({
+atomic.setConfig({
   breakpoints: {
     sm: "768px",
     md: "992px",
     lg: "1200px",
   },
+  useRtl: true,
   custom: {
     "font-primary": "var(--font-primary)",
     "font-secondary": "var(--font-secondary)",
@@ -89,7 +90,7 @@ motaCss.setConfig({
   },
 });
 
-motaCss.customValue((value) => {
+atomic.customValue((value) => {
   const regexp = /\.\d*/g;
   if (regexp.test(value) && value.includes("color")) {
     const val = value.replace(regexp, "");
@@ -100,11 +101,11 @@ motaCss.customValue((value) => {
 });
 
 exports.setAtomicCss = (str) => {
-  motaCss.find(str);
+  atomic.find(str);
 };
 
 exports.getAtomicCss = () => {
-  const css = motaCss.getCss();
+  const css = atomic.getCss();
 
   return css;
 };

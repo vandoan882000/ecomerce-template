@@ -11,11 +11,11 @@
       <div class="col-md-12">
         <div component="content" class="row row-cols-lg-12 row-cols-md-12 row-cols-sm-12 row-cols-12">
           {% assign collection = collections[content.collection] %}
-          <div class="vdoan-banner vdoan-banner--{{content.direction}} c:{{content.color}}">
-            <div class="vdoan-banner__content">
-              <p class="vdoan-banner__text">{{content.title}}</p>
-              <div class="vdoan-banner__title c:color-dark">INSTILEY</div>
-              <p class="vdoan-banner__description">
+          <div class="vdoan-banner vdoan-banner--{{content.direction}} c:{{content.color}} mih:626px pos:relative ml:-15px mr:-15px">
+            <div class="vdoan-banner__content d:flex fld:column jc:center ai:center w:50% ta:center z:9">
+              <p class="vdoan-banner__text fw:500 fz:20px">{{content.title}}</p>
+              <div class="vdoan-banner__title c:{{content.color}} fw:700 fz:50px">INSTILEY</div>
+              <p class="vdoan-banner__description ff:font-secondary mb:30px">
                 {{content.description}}
               </p>
               <div class="vdoan-btn__container">
